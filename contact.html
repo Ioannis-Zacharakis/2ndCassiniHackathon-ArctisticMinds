@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+html, body {
+  height: 100%;
+}
+
+body {
+  background-image: url("arctic2.gif");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+    background-size: cover;
+}
+
+/*main bar style*/
+
+nav {
+  max-width: 960px;
+  /* The mask-image gives us some extra fading. It is not necessary but without this, you can't face out the box-shadows. This clips our menu */
+  mask-image: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #ffffff 25%, #ffffff 75%, rgba(255, 255, 255, 0) 100%);
+  margin: 0 auto;
+  /* Using padding instead of margin for the top and bottom here will keep our box-shadow visible and not affected by the mask-image */
+  padding: 0px 0;
+}
+
+nav ul {
+  text-align: center;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 25%, rgba(255, 255, 255, 0.2) 75%, rgba(255, 255, 255, 0) 100%);
+  width: 100%;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.1), inset 0 0 1px rgba(255, 255, 255, 0.6);
+}
+
+nav ul li {
+  display: inline-block;
+}
+
+nav ul li a {
+  padding: 20px;
+  font-family: "Roboto";
+  color: rgba(0, 0, 0, 0.5);
+  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.4);
+  font-size: 25px;
+  text-decoration: none;
+  display: block;
+}
+
+nav ul li a:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1), inset 0 0 1px rgba(255, 255, 255, 0.6);
+  background: rgba(255, 255, 255, 0.1);
+  color: rgba(0, 0, 0, 0.7);
+}
+
+/*dropdown menu style*/
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.1);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: rgba(0, 0, 0, 0.5);
+  padding: 12px 16px;
+   font-size: 20px;
+    cursor: pointer;
+  text-decoration: none;
+ // display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+ background-color: #ddd;
+ font-size: 20px;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/*columns style*/
+
+.column {
+  float: left;
+  width: 32.1%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 8px;
+}
+
+.about-section {
+  padding: 5px;
+  text-align: center;
+  background-color: #474e5d;
+  color: white;
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+
+@media screen and (max-width: 500px) {
+  .column {
+    width: 90%;
+    display: block;
+  }
+}
+</style>
+</head>
+<body>
+<nav>
+  <ul>
+     <li>
+      <a href="index.html">Home</a>
+    </li>
+    <li>
+      <a href="login.html">Log in</a>
+    </li>
+    
+    <li>
+      <a href="about.html">About</a>
+    </li>
+  </ul>
+</nav>
+
+
+<div class="about-section">
+  <h2>Arctistic Minds</h2>
+</div>
+
+<h2 style="text-align:center">Our Team</h2>
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <img src="Denise.jpg" alt="Denise" style="width:100%; height:100%">
+      <div class="container">
+        <h2>Denise Wenczel</h2>
+       <!-- <p class="title">CEO & Founder</p>-->
+        <p>Business Development</p>
+		<p>Sustainable Management</p>
+		<p>Project Management</p>
+        <p>denise@example.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img src="Cadia.jpg" alt="Cadia" style="width:100%; height:100%">
+      <div class="container">
+        <h2>Cadia Pander</h2>
+        <!--<p class="title">Art Director</p>-->
+        <p>Marine Security</p>
+		<p>Risk Management</p>
+		<p>Geospatial Intelligence</p>
+        <p>cadia@example.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="column">
+    <div class="card">
+      <img src="John.jpg" alt="John" style="width:100%; height:100%">
+      <div class="container">
+        <h2>Ioannis Zacharakis</h2>
+       <!-- <p class="title">Designer</p>-->
+        <p>Geinformatics Engineering</p>
+		<p>Software Engineering</p>
+		<p>Spatial Planning</p>
+        <p>johnzacomics@gmail.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+function login_permission() 
+{
+  //var txt;
+  var r = confirm("You need to login firstly.");
+  if (r == true) {
+    location.href = "login.html";
+  } 
+  else {}  
+}
+</script>
+</body>
+
+</html> 

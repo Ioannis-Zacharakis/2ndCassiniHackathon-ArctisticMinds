@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+html, body {
+  height: 100%;
+}
+
+body {
+  background-image: url("bear.gif");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+    background-size: cover;
+}
+
+/*main bar style*/
+
+nav {
+  max-width: 960px;
+  /* The mask-image gives us some extra fading. It is not necessary but without this, you can't face out the box-shadows. This clips our menu */
+  mask-image: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #ffffff 25%, #ffffff 75%, rgba(255, 255, 255, 0) 100%);
+  margin: 0 auto;
+  /* Using padding instead of margin for the top and bottom here will keep our box-shadow visible and not affected by the mask-image */
+  padding: 0px 0;
+}
+
+nav ul {
+  text-align: center;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 25%, rgba(255, 255, 255, 0.2) 75%, rgba(255, 255, 255, 0) 100%);
+  width: 100%;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.1), inset 0 0 1px rgba(255, 255, 255, 0.6);
+}
+
+nav ul li {
+  display: inline-block;
+}
+
+nav ul li a {
+  padding: 20px;
+  font-family: "Roboto";
+  color: rgba(0, 0, 0, 0.5);
+  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.4);
+  font-size: 25px;
+  text-decoration: none;
+  display: block;
+}
+
+nav ul li a:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1), inset 0 0 1px rgba(255, 255, 255, 0.6);
+  background: rgba(255, 255, 255, 0.1);
+  color: rgba(0, 0, 0, 0.7);
+}
+
+/*dropdown menu style*/
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.1);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: rgba(0, 0, 0, 0.5);
+  padding: 12px 16px;
+   font-size: 20px;
+   cursor: pointer;
+  text-decoration: none;
+ /* display: block;*/
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+ background-color: #ddd;
+ font-size: 20px;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+#com_name{
+  padding: 10px;
+  position: absolute;
+  top: 210px;
+  left: 43%;
+  width: 400px;
+  height: 250px;
+}
+
+#company_name {
+font-family: "Roboto";
+font-size: 28px;
+display: flex;
+position: absolute;
+left: 7%;
+color: rgb(102, 102, 153);
+}
+
+#by {
+font-family: "Roboto";
+font-size: 25px;
+display: flex;
+position: absolute;
+left: 24%;
+color: rgb(102, 102, 153);
+}
+
+#product_name {
+font-family: "Roboto";
+ text-shadow: 2px 2px 0 rgba(180,185,225, 0.9), 
+			 2px -2px 0 rgba(180,185,225, 0.9),
+			 -2px 2px 0 rgba(180,185,225, 0.9), 
+			 -2px -2px 0 rgba(180,185,225, 0.9);
+font-size: 40px;
+display: flex;
+color: rgb(102, 102, 153);
+}
+
+
+.div1 {
+  border-radius: 10px;
+  background-color: #a9a9a9;
+  padding: 15px;
+  margin:2px;
+  position: absolute;
+  top: 430px;
+  left: 60%;
+  width: 300px;
+  height: 220px;
+}
+
+#infos {
+font-family: Roboto;
+font-style: normal;
+display: flex;
+align-items: center;
+justify-content: center;
+color: #0570ba;
+}
+#infos1 {
+font-family: Roboto;
+font-size: 15px;
+position: absolute;
+left: 13%;
+/*justify-content: center;*/
+}
+
+</style>
+</head>
+<body>
+<nav>
+  <ul>
+  <li class="dropdown"> <a>Features <i class="fa fa-caret-down"></i></a>
+   
+    <div class="dropdown-content">
+      <a  id="routes" onclick="login_permission()">Sustainable routes</a>
+      <a  id="routes2" onclick="login_permission()">Wildlife</a>
+	  <a  id="routes3" onclick="login_permission()">Safety</a>
+      <a  id="routes4" onclick="login_permission()">Community</a>
+    </div>
+  </li>
+    <li>
+      <a href="index.html">Home</a>
+    </li>  
+    <li>
+      <a href="login.html">Log in</a>
+    </li>
+    <li>
+      <a href="contact.html">Contact</a>
+    </li>
+  </ul>
+</nav>
+
+<div class="div1">
+ <label id="infos"><b><i><font >About Arctistic Minds:</font></i></b><br> </label>
+<label id="infos1" color="#ffff23" ><br>We are a highly motivated team with knowledge in business development, administration,<br>
+ project management, geospatial data analysis and software development. <br>
+Our principal goal is to provide safe <br> and sustainable Arctic routes to our <br>
+customers in our community network, <br> protecting wildlife at the same time.</label>
+</div>
+
+<script>
+function login_permission() 
+{
+  //var txt;
+  var r = confirm("You need to login firstly.");
+  if (r == true) {
+    location.href = "login.html";
+  } 
+  else {}  
+}
+</script>
+
+</body>
+
+</html> 
